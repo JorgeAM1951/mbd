@@ -1,0 +1,34 @@
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select
+            panelClass="sort-select"
+            ngModel="sort"
+        >
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="-mana_cost">Mana Cost</mat-option>
+            <mat-option value="-added">Added</mat-option>
+            <mat-option value="-color">Color</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="cards">
+    <div class="card">
+        <div class="card-thumb-container">
+            <img src="https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=447917"
+                alt="thumbnail"
+                class="card-thumbnail"
+            >
+        </div>
+        <div class="card-description">
+            <p class="card-name">Name</p>
+            <div class="card-colors">
+                <img 
+                class="game-color"
+                src="ion/latest/scale-to-width-down/1200?cb=20160125094913" 
+                alt="slug">
+            </div>
+        </div>
+    </div>
+
+</div>
