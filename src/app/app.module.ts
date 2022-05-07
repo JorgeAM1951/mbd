@@ -27,12 +27,17 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CardInfoComponent } from './components/card-info/card-info.component';
+import { LoginPageComponent } from './components/login/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent
+    HomeComponent,
+    CardInfoComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +50,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    MatDialogModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

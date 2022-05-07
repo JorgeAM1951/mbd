@@ -1,0 +1,14 @@
+<div class="info">
+    <div class="card">
+        <img class="card-image" src="{{card?.card_image}}" alt="">
+        <ul class="card-info">
+            <ul class="card-info-name">{{card?.name}}</ul>
+            <span class="card-info-color" *ngFor="let color of card?.colors">
+                <img class="card-info-symbol" src="assets/{{color}}.png" alt="X">
+            </span>
+            <span class="card-info-types">{{card?.types}}</span>
+            <ul class="card-info-text">{{card?.description}}</ul>
+            <ul class="card-info-stats">{{card?.stats}}</ul>
+        </ul>
+    </div>
+</div>

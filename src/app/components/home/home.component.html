@@ -4,31 +4,38 @@
         <mat-select
             panelClass="sort-select"
             ngModel="sort"
+            (selectionChange)="searchCards(sort)"
         >
             <mat-option value="name">Name</mat-option>
-            <mat-option value="-mana_cost">Mana Cost</mat-option>
-            <mat-option value="-added">Added</mat-option>
-            <mat-option value="-color">Color</mat-option>
+            <mat-option value="mana_value">Mana Cost</mat-option>
+            <mat-option value="color">Color</mat-option>
         </mat-select>
     </mat-form-field>
 </div>
 <div class="cards">
-    <div class="card">
-        <div class="card-thumb-container">
-            <img src="https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=447917"
-                alt="thumbnail"
-                class="card-thumbnail"
-            >
-        </div>
-        <div class="card-description">
-            <p class="card-name">Name</p>
-            <div class="card-colors">
+    <ng-container *ngFor="let card of cards">
+        <div class="card" (click)="openCardInfo(card.name)">
+            <div class="card-thumb-container"><!--https://api.scryfall.com/cards/db0a5840-cbf7-4899-932b-8bdcbbf2e5f8?format=image-->
                 <img 
-                class="game-color"
-                src="ion/latest/scale-to-width-down/1200?cb=20160125094913" 
-                alt="slug">
+                    *ngIf="card.card_image"
+                    src="{{card.card_image}}"
+                    alt="thumbnail"
+                    class="card-thumbnail"
+                />
+                <p *ngIf="!card.card_image">No image</p>
+            </div>
+            <div class="card-description">
+                <p class="card-name">{{card.name}}</p>
+                <div class="card-colors">
+                    <img
+                        *ngFor="let color of card.colors"
+                        class="card-color"
+                        src="assets/{{color}}.png"
+                        alt="X"
+                    >
+                </div>
             </div>
         </div>
-    </div>
+    </ng-container>
 
 </div>
