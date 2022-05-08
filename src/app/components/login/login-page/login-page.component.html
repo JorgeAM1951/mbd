@@ -1,5 +1,5 @@
 <div>
-    <form class="login" #form="ngForm" (onSubmit)="login()">
+    <form class="login" #form="ngForm" (onSubmit)="onSubmit()">
         
         <input 
             class="login-user"
@@ -21,6 +21,6 @@
         >
         <label class="login-label" for="passwd">Password</label>
 
-        <button class="login-button" type="submit">Log In</button>
+        <input class="login-button" type="submit" text="Log In">
     </form>
 </div>
