@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Card } from 'src/app/models';
 import { CardsService } from 'src/app/services/cards.service';
-import { runInThisContext } from 'vm';
+
 
 @Component({
   selector: 'app-card-info',

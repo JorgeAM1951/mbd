@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -20,8 +21,12 @@ export class SearchBarComponent implements OnInit {
     this.router.navigate(['search/', form.value.search])
   }
 
-  @HostListener("click") openLoginPage(): void {
-    this.router.navigate(['admin/login'])
+  openLoginPage(): void {
+    if(sessionStorage.getItem("isLogged") === "true"){
+      this.router.navigate(['admin-page'])
+    } else{
+    this.router.navigate(['login-page'])
+    }
   }
 
 }

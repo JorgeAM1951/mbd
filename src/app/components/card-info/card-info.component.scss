@@ -48,21 +48,23 @@
             float:left;
         }
 
-        /*&-color{
+        &-color{
             margin-bottom: 10px;
             float: left;
+            display: flex ;
+            flex-direction: row !important;
 
         }
 
         &-symbol{
        
-            content: "";
+            
             clear: both;
-            display: table !important;;
+            
             width: 18px;
             height: 18px;
 
-        }*/
+        }
 
         &-text{
             font-size: 18px;
@@ -91,24 +93,3 @@
 
 }
 
-::ng-deep{
-    .card-info-color{
-        margin-bottom: 10px;
-        float: left;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-
-    }
-    
-    .card-info-symbol{
-        content: "";
-        clear: both;
-        display: table !important;;
-        width: 18px;
-        height: 18px;
-        
-        
-
-    }
-}

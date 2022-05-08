@@ -1,26 +1,26 @@
-<div>
-    <form class="login" #form="ngForm" (onSubmit)="onSubmit()">
+<div class="login">
+    <form class="login-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
         
+        <label class="login-label" for="user">User</label>
         <input 
             class="login-user"
-            type="username"
-            name="user"
-            ngModel="username"
+            type="text"
+            name="username"
+            [(ngModel)]="this.username"
             placeholder="Username"
             required
         >
-        <label class="login-label" for="user">User</label>
-
+        
+        <label class="login-label" for="passwd">Password</label>
         <input 
             class="login-passwd"
             type="password" 
             name="passwd" 
-            ngModel="passwd"
-            placeholder="Username"
+            [(ngModel)]="this.passwd"
+            placeholder="Password"
             required
         >
-        <label class="login-label" for="passwd">Password</label>
-
-        <input class="login-button" type="submit" text="Log In">
+        
+        <input class="login-button" type="submit" value="Log In"> 
     </form>
 </div>

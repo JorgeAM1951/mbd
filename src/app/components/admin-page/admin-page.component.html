@@ -1,5 +1,71 @@
-<div>
-    <form>
-        <div></div>
+<div class="admin">
+    <form class="admin-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        
+        <label class="admin-label" for="name">Card Name</label>
+        <input 
+            class="admin-tag"
+            type="text"
+            name="name"
+            [(ngModel)]="this.name"
+            placeholder="Name"
+            required
+        >
+        
+        <label class="admin-label" for="color">Colors</label>
+        <input 
+            class="admin-tag"
+            type="text" 
+            name="color" 
+            [(ngModel)]="this.color"
+            placeholder="Colors"
+            value="e.g: {2}/{W}/{W}, {R}/{R}, {B}/{G}"
+            required
+        >
+
+        <label class="admin-label" for="types">Types</label>
+        <input 
+            class="admin-tag"
+            type="text" 
+            name="types" 
+            [(ngModel)]="this.types"
+            placeholder="Types"
+           
+            required
+        >
+
+        <label class="admin-label" for="stats">Stats</label>
+        <input 
+            class="admin-tag"
+            type="text" 
+            name="stats" 
+            [(ngModel)]="this.stats"
+            placeholder="Stats"
+            value="e.g: 2/5, 3/2, */5"
+            required
+        >
+
+        <label class="admin-label" for="color">Description</label>
+        <input 
+            class="admin-tag-description"
+            type="text" 
+            name="color" 
+            [(ngModel)]="this.description"
+            placeholder="Description"
+            
+            required
+        >
+
+        <label class="admin-label" for="img">Image</label>
+        <input 
+            class="admin-tag"
+            type="text" 
+            name="img" 
+            [(ngModel)]="this.card_image"
+            placeholder="Colors"
+            value="Submit the link"
+            required
+        >
+        
+        <input class="admin-button" type="submit" value="Create card"> 
     </form>
 </div>

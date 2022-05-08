@@ -20,11 +20,11 @@ const routes: Routes = [
 
   },
   {
-    path: 'admin/login',
+    path: 'login-page',
     component: LoginPageComponent
   },
   {
-    path: 'admin',
+    path: 'admin-page',
     component: AdminPageComponent
   }
 ];

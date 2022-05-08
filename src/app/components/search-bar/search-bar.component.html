@@ -1,17 +1,17 @@
 <div class="search-container">
     <form class="search-form"  #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <span class="logo" routerLink="/">MBD</span>
+        <span class="logo" routerLink="/" routerLinkActive="Activated">MBD</span>
         <input
             class="search-input"
             name="search"
             ngModel
             placeholder="Search your card"
         />
-        <button class="search-button">Search</button>
+        <button class="search-button" type="submit">Search</button>
     </form>
 
     <div (click)="openLoginPage()">
-        <img class="search-user" src="https://flyclipart.com/thumb2/user-icon-png-pnglogocom-133466.png" alt="X">
+        <img class="search-user" src="../assets/user.png" alt="X">
     </div>
 
 </div>

@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { LoginPageComponent } from './components/login/login-page/login-page.component';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -39,12 +40,14 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
     HomeComponent,
     CardInfoComponent,
     LoginPageComponent,
-    AdminPageComponent
+    AdminPageComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule,
     FormsModule,
     HttpClientModule,
     GaugeModule.forRoot(),

@@ -1,17 +1,4 @@
-<div class="filters">
-    <mat-form-field>
-        <mat-label>Sort</mat-label>
-        <mat-select
-            panelClass="sort-select"
-            ngModel="sort"
-            (selectionChange)="searchCards(sort)"
-        >
-            <mat-option value="name">Name</mat-option>
-            <mat-option value="mana_value">Mana Cost</mat-option>
-            <mat-option value="color">Color</mat-option>
-        </mat-select>
-    </mat-form-field>
-</div>
+
 <div class="cards">
     <ng-container *ngFor="let card of cards">
         <div class="card" (click)="openCardInfo(card.name)">
