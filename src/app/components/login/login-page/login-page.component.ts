@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     
   }
 
-  login(): void{
+  onSubmit(): void{
     this.userService.login(this.username as string, this.passwd as string).then(res => {
       if(res.length == 1){
         console.log("Log In succesfull");
