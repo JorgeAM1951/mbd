@@ -30,6 +30,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { LoginPageComponent } from './components/login/login-page/login-page.component';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginPageComponent } from './components/login/login-page/login-page.com
     SearchBarComponent,
     HomeComponent,
     CardInfoComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,

@@ -9,3 +9,8 @@ export interface Card{
     types: string;
 }
 
+export interface User{
+    username: string;
+    password: string;
+}
+

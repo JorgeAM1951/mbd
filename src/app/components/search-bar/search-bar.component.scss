@@ -47,12 +47,24 @@
         }
     }
 
-    .logo {
-        margin-left: 10px;
-        color: #fff;
-        font-weight: 700;
-        cursor: pointer;
-        text-decoration: none;
+    
+
+    &-user{
+        align-items: center;
+        max-width: 100px;
+        max-height: 33px;
+        margin-right: 25px;
     }
     
+    
 }
+
+.logo {
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+

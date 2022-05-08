@@ -12,14 +12,24 @@ export class LoginPageComponent implements OnInit {
   
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ){}
   ngOnInit(): void {
     
   }
 
   login(): void{
-    let validate = this.userService.login(this.username as string, this.passwd as string);
+    this.userService.login(this.username as string, this.passwd as string).then(res => {
+      if(res.length == 1){
+        console.log("Log In succesfull");
+        this.router.navigate(['admin'])
+      }else if(res.length == 0){
+        console.log("No user with those credentials");
+      } else {
+        console.log("ERR: Check database");
+      }
+    });
     
   }
 }
